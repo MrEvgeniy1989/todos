@@ -19,6 +19,7 @@
       {
         "ignoreAtRules": ["forward", "use", "mixin", "include"]
       }
-    ]
+    ],
+    "selector-class-pattern": ["null", "null"]
   }
 }
