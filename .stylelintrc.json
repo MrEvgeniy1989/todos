@@ -5,10 +5,18 @@
     "order/order": ["custom-properties", "declarations"],
     "order/properties-order": [
       [
-        { "properties": ["position", "top", "right", "bottom", "left"] },
-        { "properties": ["display", "flex", "justify-content", "align-items"] },
-        { "properties": ["width", "height", "margin", "padding"] },
-        { "properties": ["color", "background", "border"] }
+        {
+          "properties": ["position", "top", "right", "bottom", "left"]
+        },
+        {
+          "properties": ["display", "flex", "justify-content", "align-items"]
+        },
+        {
+          "properties": ["width", "height", "margin", "padding"]
+        },
+        {
+          "properties": ["color", "background", "border"]
+        }
       ],
       {
         "unspecified": "bottomAlphabetical"
@@ -20,6 +28,11 @@
         "ignoreAtRules": ["forward", "use", "mixin", "include"]
       }
     ],
-    "selector-class-pattern": ["null", "null"]
+    "selector-class-pattern": [
+      "",
+      {
+        "disableFix": false
+      }
+    ]
   }
 }

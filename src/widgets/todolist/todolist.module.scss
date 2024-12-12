@@ -1,0 +1,15 @@
+.todolist {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem 1rem 0.5rem;
+  background-color: var(--color-light-100);
+  border-radius: 10px;
+  box-shadow:
+    0 11px 13px rgb(0 0 0 / 12%),
+    0 11px 12px rgb(0 0 0 / 24%);
+  flex-direction: column;
+  font-size: var(--font-size-l);
+  max-width: 30dvw;
+  min-width: 360px;
+}
