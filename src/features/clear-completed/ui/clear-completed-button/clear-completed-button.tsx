@@ -1,10 +1,11 @@
+import { deleteCompletedTasks } from "../../../../entities/task-list/model/tasks-slice.ts";
+import { useAppDispatch } from "../../../../shared/hooks/use-app-dispatch.ts";
 import { Button } from "../../../../shared/ui/button/button.tsx";
-import s from "./clear-completed-button.module.scss";
 
 export const ClearCompletedButton = () => {
-  return (
-    <div className={s.clearCompletedButton}>
-      <Button>Clear completed</Button>
-    </div>
-  );
+  const dispatch = useAppDispatch();
+
+  const handleDeleteCompleted = () => dispatch(deleteCompletedTasks());
+
+  return <Button onClick={handleDeleteCompleted}>Clear completed</Button>;
 };
