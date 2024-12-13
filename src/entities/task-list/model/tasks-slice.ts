@@ -1,5 +1,4 @@
 import type { PayloadAction } from "@reduxjs/toolkit";
-
 import { createSlice } from "@reduxjs/toolkit";
 import { toast } from "react-toastify";
 import { TaskType } from "./tasks.types.ts";
@@ -30,14 +29,14 @@ const tasksSlice = createSlice({
       }
     },
     deleteTask: (state, action: PayloadAction<string>) => {
-      const newState = state.filter((task) => task.id !== action.payload);
-      localStorage.setItem("tasks", JSON.stringify(newState));
-      return newState;
+      const index = state.findIndex((task) => task.id === action.payload);
+      if (index !== -1) {
+        state.splice(index, 1);
+        localStorage.setItem("tasks", JSON.stringify(state));
+      }
     },
     deleteCompletedTasks: (state) => {
-      const newState = state.filter((task) => !task.isDone);
-      localStorage.setItem("tasks", JSON.stringify(newState));
-      return newState;
+      return state.filter((task) => !task.isDone);
     },
   },
 });
