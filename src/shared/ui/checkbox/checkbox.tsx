@@ -9,7 +9,6 @@ import { CheckboxIcon } from "../../assets/icons/checkbox-icon.tsx";
 export type CheckboxProps = {
   checked: boolean;
   className?: string;
-  classNameLabel?: string;
   id?: string;
   label?: string;
   onCheckedChange: (checked: boolean) => void;
@@ -26,7 +25,6 @@ export const Checkbox = forwardRef<
       disabled,
       id,
       label,
-      classNameLabel,
       onCheckedChange,
       name,
       ...restProps
@@ -49,7 +47,7 @@ export const Checkbox = forwardRef<
             <CheckboxIcon />
           </CheckboxRadix.Indicator>
         </CheckboxRadix.Root>
-        <span className={classNameLabel}>{label}</span>
+        {label}
       </LabelRadix.Root>
     </div>
   ),

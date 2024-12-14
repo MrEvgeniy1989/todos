@@ -3,11 +3,20 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  height: 100%;
   padding: 0 10px;
   box-shadow:
     0 2px 4px rgb(0 0 0 / 10%),
     0 1px 2px rgb(0 0 0 / 6%);
   min-height: 40px;
+
+  & .taskBody {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    column-gap: 10px;
+  }
 
   & .deleteTaskButton {
     &:hover {
@@ -16,7 +25,7 @@
     }
   }
 
-  & .taskIsDoneLabel {
+  & .taskIsDoneSpan {
     opacity: 0.5;
     text-decoration: line-through;
   }
