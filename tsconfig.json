@@ -1,4 +1,8 @@
 {
+  "compilerOptions": {
+    "allowImportingTsExtensions": true,
+    "esModuleInterop": true
+  },
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },
