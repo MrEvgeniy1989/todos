@@ -4,7 +4,8 @@
   align-items: center;
 
   & button {
-    @media screen and (width <= 576px) {
+    @media screen and (width <= 1280px) {
+      padding: 0.2rem 0.25rem;
       font-size: 12px;
     }
   }
