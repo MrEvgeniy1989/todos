@@ -1,4 +1,8 @@
 .taskCounter {
   font-size: 12px;
   white-space: nowrap;
+
+  @media screen and (width <= 576px) {
+    font-size: 10px;
+  }
 }
