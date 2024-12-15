@@ -14,7 +14,7 @@ export function App() {
       <Snowfall
         color="red"
         images={[snowflake]}
-        snowflakeCount={100}
+        snowflakeCount={50}
         speed={[0.02, 0.05]}
         radius={[10.0, 15.0]}
         wind={[-0.1, 0.1]}
